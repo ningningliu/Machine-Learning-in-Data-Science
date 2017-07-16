@@ -1,0 +1,23 @@
+train <-  read.csv("/Users/ningning/Documents/R/train.csv", stringsAsFactors = T);
+test <-  read.csv("/Users/ningning/Documents/R/test.csv", stringsAsFactors = T);
+str(train)
+train$Survived
+table(train$Survived)
+test$Survived <- rep(0,418)
+test$Survived
+submit <- data.frame(PassengerID = test$PassengerID, Survived = test$Survived)
+submit <- data.frame(PassengerId = test$PassengerId, Survived = test$Survived)
+write.csv(submit, file = "theyallperish.csv", row.names = FALSE)
+prop.table (table (train$Sex, train$Survived))
+prop.table (table (train$Sex, train$Survived), 1)
+test$Survived <- 0
+test$Survived[test$Sex=='female'] <- 1
+summary (train$Age)
+print('hello')
+print('hello')
+print('hello')
+print('hello')
+setwd("/Users/ningning/Documents/ML A-Z/P1-Pre-process Data")
+dataset = read.csv('Data.csv')
+print(dataset)
+view(dataset)
