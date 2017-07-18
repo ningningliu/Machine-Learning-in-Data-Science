@@ -21,4 +21,5 @@
 * K-最近邻算法
 * SVM
 * Kernel SVM
+* 贝叶斯
 
